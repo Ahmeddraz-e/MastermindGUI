@@ -166,14 +166,14 @@ public class MastermindCustomGUI  extends JFrame {
         }
     }
 
-    // حساب نقاط CORRECT POSITION و CORRECT COLOR
+   
     private void checkGuess() {
         int correctPosition = 0;
         int correctColor = 0;
         boolean[] secretCodeUsed = new boolean[codeLength];
         boolean[] guessUsed = new boolean[codeLength];
 
-        // التحقق من الموقع الصحيح (Correct Position)
+     
         for (int i = 0; i < codeLength; i++) {
             if (currentGuess[i].equals(secretCode[i])) {
                 correctPosition++;
@@ -182,7 +182,7 @@ public class MastermindCustomGUI  extends JFrame {
             }
         }
 
-        // التحقق من اللون الصحيح (Correct Color)
+        
         for (int i = 0; i < codeLength; i++) {
             if (!guessUsed[i]) {
                 for (int j = 0; j < codeLength; j++) {
@@ -195,7 +195,7 @@ public class MastermindCustomGUI  extends JFrame {
             }
         }
 
-        // تحديث النقاط
+       
         correctPositionLabel.setText("Black Ball: " + correctPosition);
         correctColorLabel.setText("White Ball: " + correctColor);
     }
